@@ -40,7 +40,7 @@ Visualize results to assess the model’s performance in removing noise
 ### Name: MITHUN KUMAR G
 ### Register Number: 212224230160
 
-```
+```PYTHON
 class DenoisingAutoencoder(nn.Module):
     def __init__(self):
         super(DenoisingAutoencoder, self).__init__()
