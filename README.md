@@ -45,19 +45,19 @@ class DenoisingAutoencoder(nn.Module):
     def __init__(self):
         super(DenoisingAutoencoder, self).__init__()
         self.encoder = nn.Sequential(
-            nn.Conv2d(1, 16, 3, padding=1),  # 28x28 -> 28x28
+            nn.Conv2d(1, 16, 3, padding=1),  
             nn.ReLU(),
-            nn.MaxPool2d(2, 2),             # 28x28 -> 14x14
-            nn.Conv2d(16, 8, 3, padding=1), # 14x14 -> 14x14
+            nn.MaxPool2d(2, 2),             
+            nn.Conv2d(16, 8, 3, padding=1), 
             nn.ReLU(),
-            nn.MaxPool2d(2, 2)              # 14x14 -> 7x7
+            nn.MaxPool2d(2, 2)              
         )
         self.decoder = nn.Sequential(
-            nn.ConvTranspose2d(8, 16, 2, stride=2),    # 7x7 -> 14x14
+            nn.ConvTranspose2d(8, 16, 2, stride=2),    
             nn.ReLU(),
-            nn.ConvTranspose2d(16, 8, 2, stride=2),    # 14x14 -> 28x28
+            nn.ConvTranspose2d(16, 8, 2, stride=2),    
             nn.ReLU(),
-            nn.Conv2d(8, 1, 3, padding=1),             # 28x28
+            nn.Conv2d(8, 1, 3, padding=1),             
             nn.Sigmoid()
         )
 
