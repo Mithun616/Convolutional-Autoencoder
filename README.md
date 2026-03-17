@@ -130,12 +130,13 @@ visualize_denoising(model, test_loader)
 ```
 
 ## OUTPUT
-
 ### Model Summary
 
+![alt text](image.png)
 
 ### Original vs Noisy Vs Reconstructed Image
 
+![alt text](image-1.png)
 
 ## RESULT
 
